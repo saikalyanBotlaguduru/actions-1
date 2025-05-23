@@ -1,0 +1,31 @@
+name: Generate ascii art in sequential
+
+on: push
+jobs:
+    build-job-1:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Install Cowsay 
+          run: sudo apt-get install cowsay -y
+
+        - name: execute cowsay 
+          run: cowsay -f dragon  " Run for cover , i ma a dragon...." >> dragon.txt
+          
+        - name: sleep for 30 sec
+          run: sleep 30
+    test-job-2:
+        runs-on: ubuntu-latest
+        steps:
+        - name: sleep for 10 seconds
+          run: sleep 10
+        - name: test file exists
+          run: grep -i "dragon" dragon.txt
+    deploy-job-3:
+        runs-on: ubuntu-latest
+        steps: 
+        - name: read file
+          run: cat dragonn.txt
+        - name: Deploy
+          run: echo "deploying......"
+
+        
