@@ -8,7 +8,8 @@ jobs:
         steps:
             - name: checkout repo
               uses: actions/checkout@v4
-            - name: welcome message
-              run: echo "my first message"
-            - name: list files
-              run: ls
+            - name: List and Read files
+              run:  |
+                echo "my first multi step job"
+                ls -ltra
+                cat README.md
