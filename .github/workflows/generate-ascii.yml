@@ -3,7 +3,7 @@ name: Generate Ascii text
 on: push
 
 jobs:
-    ascii job:
+    ascii-job:
         runs-on: ubuntu-latest
         steps:
             - name: checkout
@@ -12,9 +12,10 @@ jobs:
               run:  sudo apt-get install cowsay
             - name: Execute cowsay cmd
               run:  cowsay -f dragon "run for cover, i am a dragon ..." >>  dragon.txt
-            - name: test file exists?
+            - name: test file exists
               run:  grep -i "dragon" dragon.txt
             - name: read file
               run:  cat dragon.txt
             - name: list repo files
               run:  ls -ltra
+
