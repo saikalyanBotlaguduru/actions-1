@@ -1,16 +1,14 @@
-name: My First Workflow
+name: My First WorkFlow
 
 on: push
 
 jobs: 
-    first_job: 
+    first-job:
         runs-on: ubuntu-latest
         steps:
-            - name: checkoot repo
+            - name: checkout repo
               uses: actions/checkout@v4
             - name: welcome message
-              run: echo "first message"
-            - name: List Files
+              run: echo "my first message"
+            - name: list files
               run: ls
-            - name: Read file
-              run: cat README.md
