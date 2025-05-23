@@ -14,7 +14,7 @@ jobs:
 
         - name: executing shell script
           run: |
-            chmod +x   ./generate-asc.sh
+            chmod  +x   generate-asc.sh
             ./generate-asc.sh
 
           
