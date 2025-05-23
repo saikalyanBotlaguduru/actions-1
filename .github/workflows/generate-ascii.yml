@@ -15,7 +15,7 @@ jobs:
         - name: executing shellscript
           run: |
             chmod  +x .github/workflows/generate-asc-script.sh
-            ./generate-asc-script.sh
+            .github/workflows/generate-asc-script.sh
 
           
             
