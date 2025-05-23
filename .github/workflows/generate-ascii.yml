@@ -8,12 +8,14 @@ jobs:
         steps:
         - name: checkout
           uses: actions/checkout@v4
+
         - name: list repo files
           run:  ls -ltra
+
         - name: executing shell script
           run: |
-                chmod +x ./generate-asc.sh
-                ./generate-ascii.sh
+                chmod +x   ./generate-asc.sh
+                ./generate-asc.sh
 
           
             
