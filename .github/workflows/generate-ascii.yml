@@ -12,7 +12,7 @@ jobs:
         - name: list repo files
           run:  ls -ltra
 
-        - name: executing shell script
+        - name: executing shellscript
           run: |
             chmod  +x  generate-asc-script.sh
             ./generate-asc-script
